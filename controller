@@ -1,0 +1,30 @@
+
+form.php
+<?php class Form extends CI_Controller {
+function __construct(){
+		parent::__construct();
+    }
+function index(){
+
+}
+
+function logindata(){
+$user_name=$this->input->post('user_name');
+$address=$this->input->post('address');
+$education=$this->input->postT('education');
+$password=$this->input->post('password');
+
+$data = array(
+'user_name' =>$user_name,
+'address' =>$address,
+'education' =>$education,
+'password' =>$password
+);
+$this->db->insert('login',$data);
+
+}
+}
+?>
+
+
+
